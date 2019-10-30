@@ -1,0 +1,70 @@
+#include <iostream>
+using namespace std;
+
+int main()
+
+{
+	/* Declare variables. */
+
+	double eyes_1, eyes_2, eyes_3, ratio_1, ratio_2, ratio_3, diff_1_2, diff_2_3, diff_1_3, nose_chin_1, nose_chin_2, nose_chin_3;
+
+	/* Get user input from the keyboard. */
+
+	cout << ("Enter values in cm. \n");
+
+	cout << ("Enter eye distance and nose-chin distance for image 1: \n");
+
+	cin >> eyes_1;
+	cin >> nose_chin_1;
+
+	cout << ("Enter eye distance and nose-chin distance for image 2: \n");
+
+	cin >> eyes_2;
+	cin >> nose_chin_2;
+
+	cout << ("Enter eye distance and nose-chin distance for image 3: \n");
+
+	cin >> eyes_3;
+	cin >> nose_chin_3;
+
+	/* Compute ratios. */
+
+	ratio_1 = eyes_1 / nose_chin_1;
+
+	ratio_2 = eyes_2 / nose_chin_2;
+
+	ratio_3 = eyes_3 / nose_chin_3;
+
+	/* Compute differences. */
+
+	diff_1_2 = ratio_2 - ratio_1;
+
+	diff_1_3 = ratio_1 - ratio_3;
+
+	diff_2_3 = ratio_2 - ratio_3;
+
+	/* Find minimum difference and print image numbers. */
+
+	if (diff_1_2 <= diff_1_3 && diff_1_2 <= diff_2_3)
+	{
+		cout << ("Best match is between images 1 and 2 \n");
+	}
+
+	else if (diff_1_3 <= diff_1_2 && diff_1_3 <= diff_2_3)
+	{
+		cout << ("Best match is between images 1 and 3 \n");
+	}
+
+	else if (diff_2_3 <= diff_1_3 && diff_2_3 <= diff_1_2)
+	{
+		cout << ("Best match is between images 2 and 3 \n");
+	}
+	/* Exit program. */
+	cin.get();
+	cout << "\nDone!";
+	cin.get();
+
+
+	return 0;
+
+}
