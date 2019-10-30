@@ -1,0 +1,44 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	char transport;
+	int time;
+	double payment;
+	cout << "Welcome sir " << endl;
+	cout << "C for car \nl for lorry \nb for bus" << endl;
+	cout << "What transport : ";
+	cin >> transport;
+	cout << "How much time(hour) : ";
+	cin >> time;
+
+	if (transport == 'C' || transport == 'c') {
+		
+		if (time <= 3)
+			payment = 1.00;
+		else
+			payment = 1 + (time - 3)*1.5;
+	}
+	else if (transport == 'L' || transport == 'l') {
+		if (time <= 3)
+			payment = 1.50;
+		else
+			payment = 1.50 + (time - 3)*2.5;
+	}
+	else if (transport == 'B' || transport == 'b') {
+		if (time <= 3)
+			payment = 2.00;
+		else
+			payment = 2.00 + (time - 3)*3.5;
+	}
+	else
+		cout << "Your Enter Invalid Character " << endl;
+
+	cout << "\t\t\t" << endl;
+	cout << "SUMMARY OF ORDER " << endl;
+	cout << "parking time duration  : " << time<<" hours"<<endl;
+	cout << "your payment  : RM " << payment << endl;;
+	cout << "Thanks you ";
+}
