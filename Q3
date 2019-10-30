@@ -37,11 +37,19 @@ int main()
 
 	/* Compute differences. */
 
-	diff_1_2 = ratio_2 - ratio_1;
+	diff_1_2 = ratio_1 - ratio_2;
 
 	diff_1_3 = ratio_1 - ratio_3;
 
 	diff_2_3 = ratio_2 - ratio_3;
+	
+	//if ratio is negative 
+	if (diff_1_2 < 0)
+		diff_1_2 = -diff_1_2;
+	else if (diff_1_3 < 0)
+		diff_1_3 = -diff_1_3;
+	else if (diff_2_3<0)
+		diff_2_3 = -diff_2_3;
 
 	/* Find minimum difference and print image numbers. */
 
@@ -59,11 +67,7 @@ int main()
 	{
 		cout << ("Best match is between images 2 and 3 \n");
 	}
-	/* Exit program. */
-	cin.get();
-	cout << "\nDone!";
-	cin.get();
-
+	
 
 	return 0;
 
