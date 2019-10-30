@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int numberofbooks;
+	double payment;
+
+
+	cout << "plz enter number of books : ";
+	cin >> numberofbooks;
+
+	if (numberofbooks >= 10 && numberofbooks <= 19)
+	{
+		payment = 0.8 *(numberofbooks * 20);
+	}
+	else if (numberofbooks >= 20 && numberofbooks <= 49)
+	{
+		payment = 0.70*(numberofbooks * 20);
+	}
+	else if (numberofbooks >= 50 && numberofbooks <= 99)
+	{
+		payment = 0.60*(numberofbooks * 20);
+	}
+	else if (numberofbooks >= 100) {
+		payment = 0.50*(numberofbooks * 20);
+	}
+	else if (numberofbooks < 10 && numberofbooks>0)
+		payment = numberofbooks * 20;
+	else
+		cout << "your enter negative value ";
+
+	cout << " payment is : RM " << payment;
+}
